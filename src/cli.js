@@ -1,1 +1,1 @@
-import readlineSync from 'readline-sync';
+const readline = require('readline-sync');
