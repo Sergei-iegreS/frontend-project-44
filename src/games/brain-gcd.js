@@ -40,7 +40,7 @@ export const brainGcdGames = (name) => {
     }
 
     const checkAnswer = (result, answer) => {
-        return result = parseInt(answer)
+        return result === parseInt(answer)
     };
 
     const question = "Find the greatest common divisor of given numbers.";

@@ -54,7 +54,7 @@ export const brainProgressionGames = (name) => {
     }
 
     const checkAnswer = (result, answer) => {
-        return result = parseInt(answer)
+        return result === parseInt(answer)
     };
 
     const question = "What number is missing in the progression?";
