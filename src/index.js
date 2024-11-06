@@ -1,12 +1,3 @@
-import readlineSync from 'readline-sync';
-
-export const user = () => {
-
-    const name = readlineSync.question('May I have your name? \n');
-
-    console.log("Hello, ", name + "!");
-    return name
-}
 
 const maxFinalSteps = 3
 
