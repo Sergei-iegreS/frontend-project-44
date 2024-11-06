@@ -19,7 +19,7 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
         const result = getAnswer(currentQuestion)
 
         if (checkAnswer(result, otvet)) {     // Сравниваем ответы
-            console.log(otvet)
+            //console.log(otvet)
             console.log("Correct!");
             res++ 
 
