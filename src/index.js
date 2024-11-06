@@ -29,7 +29,7 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
             }
 
         } else {
-            console.log(otvet + " is wrong answer ;(. Correct answer was " + result + '.' + " Let's try again, " + user + '!')
+            console.log(otvet + " is wrong answer ;(. Correct answer was " + result + '.\n' + "Let's try again, " + user + '!')
             break;    
         }
     }    
