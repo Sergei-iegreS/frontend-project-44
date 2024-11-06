@@ -49,7 +49,7 @@ export const brainCalcGames = (name) => {
     };
 
     const checkAnswer = (result, answer) => {
-        return result = parseInt(answer)
+        return result === parseInt(answer)
     };
 
     const question = "What is the result of the expression?";
