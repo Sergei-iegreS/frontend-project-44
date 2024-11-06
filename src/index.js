@@ -16,6 +16,8 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
       
         const otvet = readlineSync.question('Your answer: '); // Вводим ответ
 
+        console.log(otvet)
+
         const result = getAnswer(currentQuestion)
 
         if (checkAnswer(result, otvet)) {     // Сравниваем ответы
