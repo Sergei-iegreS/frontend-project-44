@@ -22,21 +22,21 @@ export const brainGcdGames = (name) => {
     };
 
     const getAnswer = (num) => {
-    let expressionsIndex = num
-    let parts = expressionsIndex.split(' '); // Разбиваем строку на части
-    let num1 = parseInt(parts[0]);
-    let num2 = parseInt(parts[2]);
+        let expressionsIndex = num
+        let parts = expressionsIndex.split(' '); // Разбиваем строку на части
+        let num1 = parseInt(parts[0]);
+        let num2 = parseInt(parts[2]);
 
-    const gcd = (num1, num2) => {
-        // Базовый случай
-        if (!num2) {
-            return num1;
+        const gcd = (num1, num2) => {
+         // Базовый случай
+            if (!num2) {
+                return num1;
+            }
+            // Рекурсивный шаг
+            return gcd(num2, num1 % num2);
         }
-        // Рекурсивный шаг
-        return gcd(num2, num1 % num2);
-    }
-    let result = gcd(num1, num2)
-    return result
+        let result = gcd(num1, num2)
+        return result
     }
 
     const checkAnswer = (result, answer) => {
