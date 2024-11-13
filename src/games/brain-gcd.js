@@ -5,7 +5,7 @@ export const brainGcdGames = (name) => {
 
     const generateExpression = () => {
 
-        // Генерируем два случайных числа от 1 до 15
+        // Генерируем два случайных числа от 1 до 15 -
         const num1 = Math.floor(Math.random() * 15) + 1;
         const num2 = Math.floor(Math.random() * 15) + 1;
 
