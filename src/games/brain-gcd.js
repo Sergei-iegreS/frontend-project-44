@@ -25,7 +25,7 @@ export const brainGcdGames = (name) => {
         let expressionsIndex = num
         let parts = expressionsIndex.split(' '); // Разбиваем строку на части
         let num1 = parseInt(parts[0]);
-        let num2 = parseInt(parts[2]);
+        let num2 = parseInt(parts[1]);
 
         const gcd = (num1, num2) => {
          // Базовый случай
