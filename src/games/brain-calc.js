@@ -17,7 +17,7 @@ export const brainCalcGames = (name) => {
     
         // Формируем выражение и вычисляем результат
         const expression = `${num1} ${operator} ${num2}`;
-        return expression
+        return expression;
     };
     
         // Создаем массив из трех выражений
@@ -44,8 +44,8 @@ export const brainCalcGames = (name) => {
             case '*':
                 result = num1 * num2;
                 break;
-        }
-        return result
+        };
+        return result;
     };
 
     const checkAnswer = (result, answer) => {

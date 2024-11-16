@@ -11,7 +11,7 @@ export const brainGcdGames = (name) => {
 
         // Формируем выражение и вычисляем результат
         const expression = `${num1} ${num2}`;
-        return expression
+        return expression;
     };
 
     // Создаем массив из трех выражений
@@ -22,7 +22,7 @@ export const brainGcdGames = (name) => {
     };
 
     const getAnswer = (num) => {
-        let expressionsIndex = num
+        let expressionsIndex = num;
         let parts = expressionsIndex.split(' '); // Разбиваем строку на части
         let num1 = parseInt(parts[0]);
         let num2 = parseInt(parts[1]);
@@ -37,7 +37,7 @@ export const brainGcdGames = (name) => {
         }
         let result = gcd(num1, num2)
         return result
-    }
+    };
 
     const checkAnswer = (result, answer) => {
         return result === parseInt(answer)

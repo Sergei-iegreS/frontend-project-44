@@ -8,7 +8,7 @@ export const brainPrimeGames = (name) => {
         // Генерируем два случайных числа от 1 до 15
         const num1 = Math.floor(Math.random() * 10) + 1;
 
-        return num1
+        return num1;
     };
 
     const expressions = [];
@@ -31,10 +31,10 @@ export const brainPrimeGames = (name) => {
     };
 
     const checkAnswer = (result, otvet) => {
-        return result === otvet
+        return result === otvet;
     };
 
     const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    gameLoop (expressions, question, answer, checkAnswer, name)
-}
+    gameLoop (expressions, question, answer, checkAnswer, name);
+};

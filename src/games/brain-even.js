@@ -14,10 +14,10 @@ export const brainEvenGames = (name) => {
     };
 
     const checkAnswer = (result, otvet) => {
-        return result === otvet
+        return result === otvet;
     };
 
     const question = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    gameLoop (numbers, question, answer, checkAnswer, name)
-}
+    gameLoop (numbers, question, answer, checkAnswer, name);
+};

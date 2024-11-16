@@ -51,21 +51,21 @@ export const brainProgressionGames = (name) => {
             }
         }
         if (progressionArr[0] === '..') {
-            return progressionArr[1] - difference
+            return progressionArr[1] - difference;
         }
 
     // Проходим по массиву и ищем место, где разность нарушается
         for (let i = 1; i < progressionArr.length; i++) {
             if (progressionArr[i] === "..") {
-                return parseInt(progressionArr[i - 1]) + difference
+                return parseInt(progressionArr[i - 1]) + difference;
             }
         }
-    }
+    };
     const checkAnswer = (result, answer) => {
-        return result === parseInt(answer)
+        return result === parseInt(answer);
     };
 
     const question = "What number is missing in the progression?";
 
     gameLoop (expressions, question, getAnswer, checkAnswer, name);  
-}
+};
