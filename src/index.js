@@ -12,7 +12,7 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
 
         const currentQuestion = questionList[i]
       
-        console.log("Question:", currentQuestion); // Выводим на экран первое значение
+        console.log('Question:', currentQuestion); // Выводим на экран первое значение
       
         const otvet = readlineSync.question('Your answer: '); // Вводим ответ
 
@@ -20,18 +20,17 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
 
         if (checkAnswer(result, otvet)) {     // Сравниваем ответы
             //console.log(otvet)
-            console.log("Correct!");
+            console.log('Correct!');
             res++ 
 
             if (res === maxFinalSteps) {
-                console.log("Congratulations, " + user + '!');
+                console.log('Congratulations, ' + user + '!');
             }
 
         } else {
-            console.log(otvet + " is wrong answer ;(. Correct answer was " + result + '.\n' + "Let's try again, " + user + '!')
+            console.log(otvet + ' is wrong answer ;(. Correct answer was ' + result + '.\n' + 'Let\'s try again, ' + user + '!')
             break;    
         }
     }    
 };
-
  

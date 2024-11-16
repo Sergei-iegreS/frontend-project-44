@@ -1,7 +1,6 @@
 
 import { gameLoop } from '../index.js';
 
-
 export const brainProgressionGames = (name) => {
 
     const generateExpression = () => {
@@ -56,7 +55,7 @@ export const brainProgressionGames = (name) => {
 
     // Проходим по массиву и ищем место, где разность нарушается
         for (let i = 1; i < progressionArr.length; i++) {
-            if (progressionArr[i] === "..") {
+            if (progressionArr[i] === '..') {
                 return parseInt(progressionArr[i - 1]) + difference;
             }
         }
@@ -65,7 +64,7 @@ export const brainProgressionGames = (name) => {
         return result === parseInt(answer);
     };
 
-    const question = "What number is missing in the progression?";
+    const question = 'What number is missing in the progression?';
 
     gameLoop (expressions, question, getAnswer, checkAnswer, name);  
 };

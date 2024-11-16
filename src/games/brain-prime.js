@@ -20,14 +20,14 @@ export const brainPrimeGames = (name) => {
     const answer = (num) => {
 
     // Простые числа всегда больше 1
-        if (num <= 1) return "no";
+        if (num <= 1) return 'no';
 
     // Проверяем делимость на числа от 2 до корня из num
         for (let i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i === 0) return "no";
+            if (num % i === 0) return 'no';
         }
     // Если ни один делитель не подошел, число простое
-        return "yes";
+        return 'yes';
     };
 
     const checkAnswer = (result, otvet) => {

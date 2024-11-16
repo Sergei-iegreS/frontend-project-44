@@ -1,7 +1,6 @@
 
 import { gameLoop } from '../index.js';
 
-
 export const brainCalcGames = (name) => {
 
         // Формируем выражение
@@ -52,7 +51,7 @@ export const brainCalcGames = (name) => {
         return result === parseInt(answer)
     };
 
-    const question = "What is the result of the expression?";
+    const question = 'What is the result of the expression?';
 
     gameLoop (expressions, question, getAnswer, checkAnswer, name);   
     
