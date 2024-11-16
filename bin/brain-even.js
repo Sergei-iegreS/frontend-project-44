@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import { greet } from '../src/cli.js';
-import { user } from '../src/cli.js';
+import { greet, user } from '../src/cli.js';
 import { brainEvenGames } from '../src/games/brain-even.js';
 
 greet()
