@@ -37,13 +37,11 @@ export const brainProgressionGames = (name) => {
     for (let i = 0; i < 3; i++) {
         expressions.push(generateExpression());
     };
-
     const getAnswer = (progression) => {
 
     // Находим разность между элементами
         const progressionArr = progression.split(' ')
         
-
         let difference;
         for (let i = 0; progressionArr.length - 1; i++){
 
@@ -53,24 +51,18 @@ export const brainProgressionGames = (name) => {
                 break;
             }
         }
-
         if (progressionArr[0] === '..') {
             return progressionArr[1] - difference
         }
 
-        console.log('difference: ', difference)
-
-
     // Проходим по массиву и ищем место, где разность нарушается
         for (let i = 1; i < progressionArr.length; i++) {
-            if (progressionArr[i - 1] - progressionArr[i]) {
+            if (progressionArr[i] === "..") {
+                return parseInt(progressionArr[i - 1]) + difference
 
-    // Возвращаем пропущенное число
-                return parseInt(progressionArr[i]) + difference;
             }
         }
     }
-
     const checkAnswer = (result, answer) => {
         return result === parseInt(answer)
     };
