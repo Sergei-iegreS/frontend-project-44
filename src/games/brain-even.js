@@ -5,9 +5,8 @@ export const brainEvenGames = (name) => {
   const answer = (num) => {
     if (num % 2 === 0) {
       return 'yes';
-    } else {
-      return 'no';
     }
+    return 'no';
   };
   const checkAnswer = (result, otvet) => result === otvet;
   const question = 'Answer "yes" if the number is even, otherwise answer "no".';
