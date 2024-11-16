@@ -8,15 +8,15 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
     console.log('Question:', currentQuestion); // Выводим на экран первое значение
     const otvet = readlineSync.question('Your answer: '); // Вводим ответ
     const result = getAnswer(currentQuestion);
-    if (checkAnswer(result, otvet)) {     // Сравниваем ответы
-      //console.log(otvet)
+    if (checkAnswer(result, otvet)) { // Сравниваем ответы
+      // console.log(otvet)
       console.log('Correct!');
       res++;
       if (res === maxFinalSteps) {
-        console.log('Congratulations, ' + user + '!');
+        console.log(`Congratulations, ${ user }!`);
       }
     } else {
-      console.log(otvet + ' is wrong answer ;(. Correct answer was ' + result + '.\n' + 'Let\'s try again, ' + user + '!');
+      console.log(`${otvet } is wrong answer ;(. Correct answer was ${ result }.\n` + `Let's try again, ${ user }!`);
       break;
     }
   }

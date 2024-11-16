@@ -30,9 +30,9 @@ export const brainProgressionGames = (name) => {
     // Находим разность между элементами
     const progressionArr = progression.split(' ');
     let difference;
-    for (let i = 0; progressionArr.length - 1; i++){
+    for (let i = 0; progressionArr.length - 1; i++) {
       const result = progressionArr[i + 1] - progressionArr[i];
-      if (Number.isInteger(result)){
+      if (Number.isInteger(result)) {
         difference = result;
         break;
       }
