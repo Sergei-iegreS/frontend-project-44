@@ -4,7 +4,7 @@ const maxFinalSteps = 3;
 export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) => {
   console.log(question);
   let res = 0;
-  for (let i = 0; i < questionList.length; i++) {
+  for (let i = 0; i < questionList.length; i += 1) {
     const currentQuestion = questionList[i];
     console.log('Question:', currentQuestion); // Выводим на экран первое значение
     const otvet = readlineSync.question('Your answer: '); // Вводим ответ
@@ -12,9 +12,9 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
     if (checkAnswer(result, otvet)) { // Сравниваем ответы
       // console.log(otvet)
       console.log('Correct!');
-      res++;
+      res += 1;
       if (res === maxFinalSteps) {
-        console.log(`Congratulations, ${ user }!`);
+        console.log('Congratulations,', user + "!");
       }
     } else {
       console.log(`${otvet } is wrong answer ;(. Correct answer was ${ result }.\n` + `Let's try again, ${ user }!`);
