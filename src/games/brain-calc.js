@@ -16,7 +16,7 @@ export const brainCalcGames = (name) => {
   };
   // Создаем массив из трех выражений
   const expressions = [];
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     expressions.push(generateExpression());
   }
   const getAnswer = (num) => {
@@ -27,15 +27,15 @@ export const brainCalcGames = (name) => {
     const num2 = parseInt(parts[2]);
     let result;
     switch (operator) {
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    case '*':
-      result = num1 * num2;
-      break;
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      case '*':
+        result = num1 * num2;
+        break;
     }
     return result;
   };
