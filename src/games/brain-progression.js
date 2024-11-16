@@ -45,7 +45,7 @@ export const brainProgressionGames = (name) => {
         
 
         let difference;
-        for (i = 0; progressionArr.length - 1; i++){
+        for (let i = 0; progressionArr.length - 1; i++){
 
             const result = progressionArr[i + 1] - progressionArr[i]
             if (Number.isInteger(result)){
