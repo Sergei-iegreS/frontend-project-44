@@ -1,4 +1,5 @@
 import { gameLoop } from '../index.js';
+
 export const brainGcdGames = (name) => {
   const generateExpression = () => {
     // Генерируем два случайных числа от 1 до 15

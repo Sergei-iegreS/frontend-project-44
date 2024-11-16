@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+
 const maxFinalSteps = 3;
 export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) => {
   console.log(question);

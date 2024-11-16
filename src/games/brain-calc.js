@@ -1,4 +1,5 @@
 import { gameLoop } from '../index.js';
+
 export const brainCalcGames = (name) => {
   // Формируем выражение
   const generateExpression = () => {

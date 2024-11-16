@@ -1,4 +1,5 @@
 import { gameLoop } from '../index.js';
+
 export const brainProgressionGames = (name) => {
   const generateExpression = () => {
     // Параметры игры
