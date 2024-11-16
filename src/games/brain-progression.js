@@ -9,8 +9,8 @@ export const brainProgressionGames = (name) => {
     // Параметры игры
         const minLength = 5;
         const maxLength = 10;
-        const minNum = 1
-        const maxNum = 100 
+        const minNum = 1;
+        const maxNum = 100;
 
     // Генерация длины, начального числа и разности
         const length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
@@ -20,10 +20,9 @@ export const brainProgressionGames = (name) => {
     // Создание прогрессии и скрытие элемента
         const progression = [];
         const hiddenIndex = Math.floor(Math.random() * length);
-        let hiddenNumber;
+        
         for (let i = 0; i < length; i++) {
             if (i === hiddenIndex) {
-            hiddenNumber = firstNumber + i * difference;
              progression.push('..');
             } else {
             progression.push(firstNumber + i * difference);
@@ -59,7 +58,6 @@ export const brainProgressionGames = (name) => {
         for (let i = 1; i < progressionArr.length; i++) {
             if (progressionArr[i] === "..") {
                 return parseInt(progressionArr[i - 1]) + difference
-
             }
         }
     }
