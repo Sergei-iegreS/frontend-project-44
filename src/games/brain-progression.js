@@ -41,14 +41,32 @@ export const brainProgressionGames = (name) => {
     const getAnswer = (progression) => {
 
     // Находим разность между элементами
-        const difference = progression[1] - progression[0];
+        const progressionArr = progression.split(' ')
+        
+
+        let difference;
+        for (i = 0; progressionArr.length - 1; i++){
+
+            const result = progressionArr[i + 1] - progressionArr[i]
+            if (Number.isInteger(result)){
+                difference = result
+                break;
+            }
+        }
+
+        if (progressionArr[0] === '..') {
+            return progressionArr[1] - difference
+        }
+
+        console.log('difference: ', difference)
+
 
     // Проходим по массиву и ищем место, где разность нарушается
-        for (let i = 1; i < progression.length - 1; i++) {
-            if (progression[i + 1] - progression[i] !== difference) {
+        for (let i = 1; i < progressionArr.length; i++) {
+            if (progressionArr[i - 1] - progressionArr[i]) {
 
     // Возвращаем пропущенное число
-                return progression[i] + difference;
+                return parseInt(progressionArr[i]) + difference;
             }
         }
     }
