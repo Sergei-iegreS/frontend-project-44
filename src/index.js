@@ -14,10 +14,11 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
       console.log('Correct!');
       res += 1;
       if (res === maxFinalSteps) {
-        console.log('Congratulations,', user + "!");
+        console.log('Congratulations,', user + '!');
       }
     } else {
-      console.log(`${otvet } is wrong answer ;(. Correct answer was ${ result }.\n` + `Let's try again, ${ user }!`);
+      console.log(otvet + 'is wrong answer ;(. Correct answer was' + result + '.');
+      console.log("Let's try again," +  user + '!')
       break;
     }
   }
