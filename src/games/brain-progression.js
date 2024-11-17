@@ -53,4 +53,4 @@ const brainProgressionGames = (name) => {
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };
 
-export default brainProgressionGames
+export default brainProgressionGames;

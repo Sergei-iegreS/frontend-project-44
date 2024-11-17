@@ -13,4 +13,4 @@ const brainEvenGames = (name) => {
   gameLoop(numbers, question, answer, checkAnswer, name);
 };
 
-export default brainEvenGames
+export default brainEvenGames;

@@ -25,4 +25,4 @@ const brainPrimeGames = (name) => {
   gameLoop(expressions, question, answer, checkAnswer, name);
 };
 
-export default brainPrimeGames
+export default brainPrimeGames;

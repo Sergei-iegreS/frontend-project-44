@@ -35,4 +35,4 @@ const brainGcdGames = (name) => {
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };
 
-export default brainGcdGames
+export default brainGcdGames;
