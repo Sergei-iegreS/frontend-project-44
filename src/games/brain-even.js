@@ -1,6 +1,6 @@
 import { gameLoop } from '../index.js';
 
-export const brainEvenGames = (name) => {
+const brainEvenGames = (name) => {
   const numbers = [10, 17, 33];
   const answer = (num) => {
     if (num % 2 === 0) {
@@ -12,3 +12,5 @@ export const brainEvenGames = (name) => {
   const question = 'Answer "yes" if the number is even, otherwise answer "no".';
   gameLoop(numbers, question, answer, checkAnswer, name);
 };
+
+export default brainEvenGames

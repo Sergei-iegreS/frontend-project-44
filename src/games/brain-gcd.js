@@ -1,6 +1,6 @@
 import { gameLoop } from '../index.js';
 
-export const brainGcdGames = (name) => {
+const brainGcdGames = (name) => {
   const generateExpression = () => {
     // Генерируем два случайных числа от 1 до 15
     const num1 = Math.floor(Math.random() * 15) + 1;
@@ -34,3 +34,5 @@ export const brainGcdGames = (name) => {
   const question = 'Find the greatest common divisor of given numbers.';
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };
+
+export default brainGcdGames

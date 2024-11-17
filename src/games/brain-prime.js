@@ -1,6 +1,6 @@
 import { gameLoop } from '../index.js';
 
-export const brainPrimeGames = (name) => {
+const brainPrimeGames = (name) => {
   const generateExpression = () => {
     // Генерируем два случайных числа от 1 до 15
     const num1 = Math.floor(Math.random() * 10) + 1;
@@ -24,3 +24,5 @@ export const brainPrimeGames = (name) => {
   const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   gameLoop(expressions, question, answer, checkAnswer, name);
 };
+
+export default brainPrimeGames

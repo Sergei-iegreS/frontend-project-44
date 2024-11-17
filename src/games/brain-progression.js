@@ -1,6 +1,6 @@
 import { gameLoop } from '../index.js';
 
-export const brainProgressionGames = (name) => {
+const brainProgressionGames = (name) => {
   const generateExpression = () => {
     // Параметры игры
     const minLength = 5;
@@ -52,3 +52,5 @@ export const brainProgressionGames = (name) => {
   const question = 'What number is missing in the progression?';
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };
+
+export default brainProgressionGames

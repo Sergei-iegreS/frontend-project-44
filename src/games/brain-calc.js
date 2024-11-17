@@ -1,6 +1,6 @@
 import { gameLoop } from '../index.js';
 
-export const brainCalcGames = (name) => {
+const brainCalcGames = (name) => {
   // Формируем выражение
   const generateExpression = () => {
     // Массив с возможными операциями
@@ -43,3 +43,5 @@ export const brainCalcGames = (name) => {
   const question = 'What is the result of the expression?';
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };
+
+export default brainCalcGames
