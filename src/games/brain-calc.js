@@ -36,6 +36,8 @@ const brainCalcGames = (name) => {
       case '*':
         result = num1 * num2;
         break;
+      default:
+        console.error('Неизвестная операция: ' + operator);
     }
     return result;
   };
