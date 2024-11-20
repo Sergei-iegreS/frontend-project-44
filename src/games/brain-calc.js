@@ -22,9 +22,9 @@ const brainCalcGames = (name) => {
   const getAnswer = (num) => {
     const expressionsIndex = num;
     const parts = expressionsIndex.split(' '); // Разбиваем строку на части
-    const num1 = parseInt(parts[0]);
+    const num1 = String(parts[0]);
     const operator = parts[1];
-    const num2 = parseInt(parts[2]);
+    const num2 = String(parts[2]);
     let result;
     switch (operator) {
       case '+':
