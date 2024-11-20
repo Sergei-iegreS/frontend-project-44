@@ -47,6 +47,7 @@ const brainProgressionGames = (name) => {
         return parseInt(progressionArr[i - 1], 10) + difference;
       }
     }
+    return console.log(progression);
   };
   const checkAnswer = (result, answer) => result === parseInt(answer, 10);
   const question = 'What number is missing in the progression?';

@@ -19,15 +19,15 @@ const brainGcdGames = (name) => {
     const parts = expressionsIndex.split(' '); // Разбиваем строку на части
     const num1 = parseInt(parts[0], 10);
     const num2 = parseInt(parts[1], 10);
-    const gcd = (num1, num2) => {
+    const gcd = (a, b) => {
       // Базовый случай
-      if (!num2) {
-        return num1;
+      if (!b) {
+        return a;
       }
       // Рекурсивный шаг
-      return gcd(num2, num1 % num2);
+      return gcd(b, a % b);
     };
-    const result = gcd(num1, num2);
+    const result = gcd(a, b);
     return result;
   };
   const checkAnswer = (result, answer) => result === parseInt(answer, 10);
