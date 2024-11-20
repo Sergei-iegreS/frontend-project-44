@@ -17,8 +17,8 @@ const brainGcdGames = (name) => {
   const getAnswer = (num) => {
     const expressionsIndex = num;
     const parts = expressionsIndex.split(' '); // Разбиваем строку на части
-    let num1 = parseInt(parts[0], 10);
-    let num2 = parseInt(parts[1], 10);
+    const num1 = parseInt(parts[0], 10);
+    const num2 = parseInt(parts[1], 10);
     const gcd = (num1, num2) => {
       // Базовый случай
       if (!num2) {
