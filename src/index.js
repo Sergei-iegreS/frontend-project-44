@@ -17,7 +17,7 @@ const gameLoop = (questionList, question, getAnswer, checkAnswer, user) => {
         console.log(`Congratulations, ${user}!`);
       }
     } else {
-      console.log(`${otvet} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${user}!`)
+      console.log(`${otvet} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${user}!`);
       break;
     }
   }
