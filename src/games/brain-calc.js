@@ -39,7 +39,7 @@ const brainCalcGames = (name) => {
     }
     return result;
   };
-  const checkAnswer = (result, answer) => result === parseInt(answer);
+  const checkAnswer = (result, answer) => result === parseInt(answer, 10);
   const question = 'What is the result of the expression?';
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };

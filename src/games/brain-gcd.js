@@ -17,8 +17,8 @@ const brainGcdGames = (name) => {
   const getAnswer = (num) => {
     const expressionsIndex = num;
     const parts = expressionsIndex.split(' '); // Разбиваем строку на части
-    const num1 = parseInt(parts[0]);
-    const num2 = parseInt(parts[1]);
+    const num1 = parseInt(parts[0], 10);
+    const num2 = parseInt(parts[1], 10);
     const gcd = (num1, num2) => {
       // Базовый случай
       if (!num2) {
@@ -30,7 +30,7 @@ const brainGcdGames = (name) => {
     const result = gcd(num1, num2);
     return result;
   };
-  const checkAnswer = (result, answer) => result === parseInt(answer);
+  const checkAnswer = (result, answer) => result === parseInt(answer, 10);
   const question = 'Find the greatest common divisor of given numbers.';
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };

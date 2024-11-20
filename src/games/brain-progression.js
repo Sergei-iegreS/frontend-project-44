@@ -44,11 +44,11 @@ const brainProgressionGames = (name) => {
     // Проходим по массиву и ищем место, где разность нарушается
     for (let i = 1; i < progressionArr.length; i += 1) {
       if (progressionArr[i] === '..') {
-        return parseInt(progressionArr[i - 1]) + difference;
+        return parseInt(progressionArr[i - 1], 10) + difference;
       }
     }
   };
-  const checkAnswer = (result, answer) => result === parseInt(answer);
+  const checkAnswer = (result, answer) => result === parseInt(answer, 10);
   const question = 'What number is missing in the progression?';
   gameLoop(expressions, question, getAnswer, checkAnswer, name);
 };
