@@ -27,7 +27,7 @@ const brainGcdGames = (name) => {
       // Рекурсивный шаг
       return gcd(b, a % b);
     };
-    const result = gcd(a, b);
+    const result = gcd(num1, num2);
     return result;
   };
   const checkAnswer = (result, answer) => result === parseInt(answer, 10);
