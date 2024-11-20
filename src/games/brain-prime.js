@@ -1,4 +1,4 @@
-import { gameLoop } from '../index.js';
+import gameLoop from '../index.js';
 
 const brainPrimeGames = (name) => {
   const generateExpression = () => {
@@ -7,14 +7,14 @@ const brainPrimeGames = (name) => {
     return num1;
   };
   const expressions = [];
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     expressions.push(generateExpression());
   }
   const answer = (num) => {
     // Простые числа всегда больше 1
     if (num <= 1) return 'no';
     // Проверяем делимость на числа от 2 до корня из num
-    for (let i = 2; i <= Math.sqrt(num); i++) {
+    for (let i = 2; i <= Math.sqrt(num); i += 1) {
       if (num % i === 0) return 'no';
     }
     // Если ни один делитель не подошел, число простое

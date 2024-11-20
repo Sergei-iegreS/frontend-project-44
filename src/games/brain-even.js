@@ -1,4 +1,4 @@
-import { gameLoop } from '../index.js';
+import gameLoop from '../index.js';
 
 const brainEvenGames = (name) => {
   const numbers = [10, 17, 33];

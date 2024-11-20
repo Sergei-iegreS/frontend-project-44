@@ -1,4 +1,4 @@
-import { gameLoop } from '../index.js';
+import gameLoop from '../index.js';
 
 const brainProgressionGames = (name) => {
   const generateExpression = () => {
@@ -14,7 +14,7 @@ const brainProgressionGames = (name) => {
     // Создание прогрессии и скрытие элемента
     const progression = [];
     const hiddenIndex = Math.floor(Math.random() * length);
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < length; i += 1) {
       if (i === hiddenIndex) {
         progression.push('..');
       } else {
@@ -24,14 +24,14 @@ const brainProgressionGames = (name) => {
     return progression.join(' ');
   };
   const expressions = [];
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     expressions.push(generateExpression());
   }
   const getAnswer = (progression) => {
     // Находим разность между элементами
     const progressionArr = progression.split(' ');
     let difference;
-    for (let i = 0; progressionArr.length - 1; i++) {
+    for (let i = 0; progressionArr.length - 1; i += 1) {
       const result = progressionArr[i + 1] - progressionArr[i];
       if (Number.isInteger(result)) {
         difference = result;
@@ -42,7 +42,7 @@ const brainProgressionGames = (name) => {
       return progressionArr[1] - difference;
     }
     // Проходим по массиву и ищем место, где разность нарушается
-    for (let i = 1; i < progressionArr.length; i++) {
+    for (let i = 1; i < progressionArr.length; i += 1) {
       if (progressionArr[i] === '..') {
         return parseInt(progressionArr[i - 1]) + difference;
       }

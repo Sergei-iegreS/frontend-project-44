@@ -1,4 +1,4 @@
-import { gameLoop } from '../index.js';
+import gameLoop from '../index.js';
 
 const brainGcdGames = (name) => {
   const generateExpression = () => {
@@ -11,7 +11,7 @@ const brainGcdGames = (name) => {
   };
   // Создаем массив из трех выражений
   const expressions = [];
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     expressions.push(generateExpression());
   }
   const getAnswer = (num) => {

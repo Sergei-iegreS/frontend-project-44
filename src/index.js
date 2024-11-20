@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const maxFinalSteps = 3;
-export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) => {
+const gameLoop = (questionList, question, getAnswer, checkAnswer, user) => {
   console.log(question);
   let res = 0;
   for (let i = 0; i < questionList.length; i += 1) {
@@ -17,9 +17,11 @@ export const gameLoop = (questionList, question, getAnswer, checkAnswer, user) =
         console.log('Congratulations, ' + user + '!');
       }
     } else {
-      console.log(otvet + ' is wrong answer ;(. Correct answer was ' + result + '.')
+      console.log(otvet + ' is wrong answer ;(. Correct answer was ' + result + '.');
       console.log("Let's try again, " + user + '!');
       break;
     }
   }
 };
+
+export default gameLoop;
